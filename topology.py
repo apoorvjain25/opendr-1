@@ -11,7 +11,8 @@ __all__ = ['get_vertices_per_edge', 'get_faces_per_edge', 'get_vert_connectivity
 import zlib
 import numpy as np
 import scipy.sparse as sp
-import cPickle as pickle
+#import cPickle as pickle
+import _pickle as pickle
 from chumpy.utils import row, col
 
 

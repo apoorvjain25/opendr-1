@@ -50,9 +50,9 @@ class TestGeometry(unittest.TestCase):
         predicted_diff = dr_predicted.dot(eps.flatten()).reshape((-1,3))   
 
         if False:
-            print np.max(np.abs(empirical_diff-predicted_diff))
-            print empirical_diff[:6]
-            print predicted_diff[:6]
+            print (np.max(np.abs(empirical_diff-predicted_diff)))
+            print (empirical_diff[:6])
+            print (predicted_diff[:6])
         self.assertTrue(np.max(np.abs(empirical_diff-predicted_diff)) < 6e-13)
 
 

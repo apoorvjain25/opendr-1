@@ -9,14 +9,15 @@ See LICENCE.txt for licensing and contact information.
 
 __all__ = ['Rodrigues', 'VertNormals', 'TriNormals', 'TriNormalsScaled', 'CrossProduct', 'TriArea', 'AcosTriAngles', 'volume']
 
-from cvwrap import cv2
+#from cvwrap import cv2
+import cv2
 import numpy as np
 import scipy.sparse as sp
 from chumpy.utils import row, col
 from chumpy import *
 import chumpy as ch
 from chumpy.ch import MatVecMult
-from topology import get_faces_per_edge, get_vert_connectivity
+from opendr.topology import get_faces_per_edge, get_vert_connectivity
 
 
 def volume(v, f):

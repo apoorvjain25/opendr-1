@@ -10,22 +10,29 @@ See LICENCE.txt for licensing and contact information.
 __all__ = ['ColoredRenderer', 'TexturedRenderer', 'DepthRenderer']
 
 import numpy as np
-from cvwrap import cv2
+#from cvwrap import cv2
+import cv2
 import time
 import platform
 import scipy.sparse as sp
 from copy import deepcopy
-import common
-from common import draw_visibility_image, draw_barycentric_image, draw_colored_primitives, draw_texcoord_image
-from topology import get_vertices_per_edge, get_faces_per_edge
+import opendr.common as common
+from opendr.common import draw_visibility_image, draw_barycentric_image, draw_colored_primitives, draw_texcoord_image
+from opendr.topology import get_vertices_per_edge, get_faces_per_edge
 
-if platform.system()=='Darwin':
-    from contexts.ctx_mac import OsContext
-else:
-    from contexts.ctx_mesa import OsContext
+#if platform.system()=='Darwin':
+#    from contexts.ctx_mac import OsContext
+#else:
+#    from contexts.ctx_mesa import OsContext
 
+import OpenGL.GL as GL
+import OpenGL.GL.shaders as shaders
+from OpenGL.arrays import vbo
+from PIL import Image
+# import pdb
+import matplotlib.pyplot as plt
 from chumpy import *
-from contexts._constants import *
+from opendr.contexts._constants import *
 from chumpy.utils import row, col
 
 

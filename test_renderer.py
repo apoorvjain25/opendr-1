@@ -263,8 +263,8 @@ class TestRenderer(unittest.TestCase):
                         plt.title(title)
                         plt.imshow(im)
 
-                    print '%s: median nonzero %.2e' % (atrname, mederror,)
-                    print '%s: mean nonzero %.2e' % (atrname, meanerror,)
+                    print ('%s: median nonzero %.2e' % (atrname, mederror,))
+                    print ('%s: mean nonzero %.2e' % (atrname, meanerror,))
                     plt.draw()
                     plt.show()
 

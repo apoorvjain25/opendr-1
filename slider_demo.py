@@ -9,7 +9,7 @@ def nothing(x):
     
 def get_renderer():
     import chumpy as ch
-    from opendr.everything import *
+    #from opendr.everything import *
 
     # Load mesh
     m = load_mesh('/Users/matt/geist/OpenDR/test_dr/nasa_earth.obj')
